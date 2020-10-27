@@ -1,0 +1,24 @@
+
+ 项目内数据流向
+  vue页面->store-->api
+  api->store->vue页面
+顾客数据显示：
+  api：链接好接口，放数据进行链接 export function 方法名{return axios.post(data)('url',data)}
+  store：import引入api中的方法,在action中创建方法调用api中的方法，之后对state数据做出改变
+  vue页面：使用辅助函数引入store中的对象,...mapgetter,...mapmutation，然后将数据显示到页面上。
+
+添加顾客
+  保存顾客
+  刷新顾客 啥也不动，以现有条件去查询
+
+详情页
+  1、路由的跳转
+  2、详情页面刷新依然正常
+
+ api文件个数对应后台接口模块个数 仓库文件个数对应前端模块个数
+
+ api saveOrUpdate-->vuex findAll
+ api deleteById-->vue-->findAll
+
+ 每页的数据依赖哪些变量
+  addressData page pageSize
